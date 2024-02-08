@@ -67,3 +67,14 @@ plt.figure(figsize=(10, 6))
 plt.pie(top_jobs, labels=top_jobs.index, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops=dict(width=0.4))
 plt.title("Percentage of employees by position")
 plt.show()
+
+print('\n***********************\n')
+
+correlation = df['TotalPay'].corr(df['BasePay'])
+print("Correlation between TotalPay and BasePay: ",correlation)
+
+plt.scatter(df['BasePay'], df['TotalPay'])
+plt.title('Scatter Plot: TotalPay vs BasePay')
+plt.xlabel('BasePay')
+plt.ylabel('TotalPay')
+plt.show()
